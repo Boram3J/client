@@ -90,7 +90,7 @@ export const LoadingBackground = styled.div`
 
   & > img {
     opacity: 0.2;
-    width: 400px;
+    height: calc(100% - 20px);
   }
 `;
 
@@ -104,6 +104,6 @@ export const ResultContainer = styled.div`
   justify-content: center;
 
   & > img {
-    width: 400px;
+    height: calc(100% - 20px);
   }
 `;
