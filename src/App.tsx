@@ -1,17 +1,16 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Header from './components/Header';
-import Content from './components/Content';
-import Footer from './components/Footer';
+import Main from './pages/Main';
+import { PATH } from './constants/path';
 
 function App() {
   return (
-    <div className='App'>
-      <Header />
-      <Content />
-      <Footer />
-      <input id='file-input' style={{ display: 'none' }} type='file' />
-    </div>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Routes>
+        <Route path={PATH.root} element={<Main />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
