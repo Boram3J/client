@@ -10,7 +10,6 @@ export default function Main() {
       <Header />
       <Content />
       <Footer />
-      <input id='file-input' style={{ display: 'none' }} type='file' />
     </div>
   );
 }

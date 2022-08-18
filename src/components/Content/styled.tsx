@@ -31,41 +31,79 @@ export const Body = styled.div`
   height: calc(100% - 76px);
   border: 2px dashed rgba(255, 255, 255, 0.12);
   border-radius: 10px;
+  position: relative;
+`;
+
+export const ReadyContainer = styled.div`
+  width: 340px;
+  height: 100%;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   & > div {
-    width: 340px;
-    height: 100%;
-    padding: 20px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    cursor: pointer;
 
-    & > div {
-      text-align: center;
-      cursor: pointer;
+    & > div:nth-of-type(1) {
+      width: 100px;
+      margin: 0 auto 20px;
+    }
 
-      & > div:nth-of-type(1) {
-        width: 100px;
-        margin: 0 auto 20px;
+    & > div:nth-of-type(2) {
+      font-size: 24px;
+      font-weight: 600;
+
+      & > span:nth-of-type(1) {
       }
 
-      & > div:nth-of-type(2) {
-        font-size: 24px;
-        font-weight: 600;
-
-        & > span:nth-of-type(1) {
-        }
-
-        & > span:nth-of-type(2) {
-          color: rgba(222, 190, 73, 1);
-        }
-      }
-
-      & > div:nth-of-type(3) {
-        font-size: 16px;
-        color: rgba(255, 255, 255, 0.5);
+      & > span:nth-of-type(2) {
+        color: rgba(222, 190, 73, 1);
       }
     }
+
+    & > div:nth-of-type(3) {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+`;
+
+export const LoadingContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  & > img {
+    width: 80px;
+  }
+`;
+
+export const LoadingBackground = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  & > img {
+    opacity: 0.2;
+    width: 400px;
+  }
+`;
+
+export const ResultContainer = styled.div`
+  width: 600px;
+  height: 100%;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > img {
+    width: 400px;
   }
 `;
