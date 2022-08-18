@@ -90,7 +90,7 @@ export const LoadingBackground = styled.div`
 
   & > img {
     opacity: 0.2;
-    height: calc(100% - 20px);
+    height: calc(100vh - 80px - 80px - 60px - 140px);
   }
 `;
 

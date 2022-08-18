@@ -11,6 +11,7 @@ export const Container = styled.header`
 export const Title = styled.h2`
   font-size: 24px;
   font-weight: bold;
+  cursor: pointer;
 `;
 
 export const FlexContainer = styled.div`

@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import * as Styled from './styled';
 
 export default function Header() {
+  const refreshPage = useCallback(() => {
+    window.location.reload();
+  }, []);
+
   return (
     <Styled.Container>
       <div>
-        <Styled.Title>OCRX Translate</Styled.Title>
+        <Styled.Title onClick={refreshPage}>OCRX Translate</Styled.Title>
       </div>
       <Styled.FlexContainer className='flex'>
         <div>Text</div>
