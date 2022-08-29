@@ -7,6 +7,7 @@ import { setSelectedMenu } from '../../reducers/menu.reducer';
 
 export default function Header() {
   const dispatch = useDispatch();
+  const { kind } = useSelector((state: RootState) => state.menu);
 
   const refreshPage = useCallback(() => {
     window.location.reload();
@@ -28,8 +29,14 @@ export default function Header() {
         <Styled.Title onClick={refreshPage}>OCRX Translate</Styled.Title>
       </div>
       <Styled.FlexContainer className='flex'>
-        <div onClick={changeMode.bind(null, 'text')}>Text</div>
-        <div onClick={changeMode.bind(null, 'translate')}>Translate</div>
+        <div style={kind === 'text' ? { color: 'rgba(255, 255, 255, 1)' } : {}} onClick={changeMode.bind(null, 'text')}>
+          Text
+        </div>
+        <div
+          style={kind === 'translate' ? { color: 'rgba(255, 255, 255, 1)' } : {}}
+          onClick={changeMode.bind(null, 'translate')}>
+          Translate
+        </div>
       </Styled.FlexContainer>
     </Styled.Container>
   );
