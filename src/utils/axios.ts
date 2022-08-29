@@ -1,11 +1,8 @@
-import axis from 'axios';
+import axios, { AxiosRequestHeaders } from 'axios';
 
-export const callApi = async (url: string, method: string, data: any) => {
-  const response = await axis({
-    method,
-    url,
-    data,
-  });
+// axios.defaults.baseURL = 'https://api.example.com';
+// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-  return response;
+export const callRequest = async (url: string, method: string, data: any, headers: AxiosRequestHeaders) => {
+  return await axios({ headers, method, url, data });
 };

@@ -5,7 +5,7 @@ import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
 import storage from 'redux-persist/lib/storage';
-import image from './image.reducer';
+import menu from './menu.reducer';
 
 const middleware = [];
 const transformCircular = createTransform(
@@ -13,13 +13,13 @@ const transformCircular = createTransform(
   (outboundState, key) => parse(outboundState),
 );
 const rootReducer = combineReducers({
-  image,
+  menu,
 });
 const persistedReducer = persistReducer(
   {
     key: 'root',
     storage,
-    whitelist: ['user', 'pastel'],
+    // whitelist: ['user'],
     transforms: [transformCircular],
   },
   rootReducer,
